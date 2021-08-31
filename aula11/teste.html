@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body {
+            background-color: rgb(92, 190, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite seu nome</h1>
+    <input type="text" name="name" id="name">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="msg">Autenticando...</div>
+    <script>
+        function enviar(){
+            var name = window.document.getElementById('name').value
+            var msg = window.document.getElementById('msg')
+             
+            if (name == 'bruno') {
+                msg.innerText = 'Olá, bruno como vai!'
+            }else {
+                msg.innerText += `Olá, ${name}!`
+            }
+        }
+    </script>
+</body>
+</html>

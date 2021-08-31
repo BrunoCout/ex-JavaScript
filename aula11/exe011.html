@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>País de Origem</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="processar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function processar() {
+            var pais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var con = String(pais.value)
+
+            res.innerHTML = `Você nasceu no <strong>${con}</strong> `
+            if (con == 'Brasil') {
+                res.innerHTML += `Portando é <strong>Brasileiro</strong>!`
+            }else {
+                res.innerHTML += `Portando é <strong>Estrangeiro</strong>!`
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
